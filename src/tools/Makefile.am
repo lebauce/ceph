@@ -26,6 +26,7 @@ if WITH_REST_BENCH
 rest_bench_SOURCES = tools/rest_bench.cc
 rest_bench_SOURCES += common/obj_bencher.cc # needs cleanup so it can go in libcommon.la
 rest_bench_LDADD = $(CEPH_GLOBAL)
+rest_bench_CXXFLAGS = -fPIC
 bin_PROGRAMS += rest-bench
 
 if WITH_SYSTEM_LIBS3
